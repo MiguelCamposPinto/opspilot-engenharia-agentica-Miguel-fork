@@ -70,7 +70,7 @@ def avaliar_regras(caso: Caso, resposta: str, estado: dict) -> dict[str, float]:
         # │  Dica: Compare diag.get("servico_causa_raiz") com caso.servico_causa_esperado e converta o booleano para float.
         # │  Copilot Chat: "Atribua a notas["servico_correto"] o float da comparação entre diag.get("servico_causa_raiz") e caso.servico_causa_esperado"
         # └─ Troque cada ___ abaixo. Gabarito: `make gabarito-aula AULA=4`
-        notas["servico_correto"] = float(estado.get("servico_causa_raiz") == caso.servico_causa_esperado)
+        notas["servico_correto"] = float(diag.get("servico_causa_raiz") == caso.servico_causa_esperado)
     return notas
 
 
